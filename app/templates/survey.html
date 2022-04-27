@@ -16,12 +16,59 @@
         <form method=post>
             {{ form.hidden_tag() }}
             
-            {{ form.field.label }} <br>
-            {{ form.field(size=64) }}
+            {{ form.Quest1.label }} <br>
+            {{ form.Quest1(size=64) }}
             <!--List the errors for this field-->
-            {% for error in form.field.errors %}
+            {% for error in form.Quest1.errors %}
                 <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
+
+            <br>
+
+            {{ form.Quest2.label }} <br>
+            {{ form.Quest2(size=64) }}
+            <!--List the errors for this field-->
+            {% for error in form.Quest2.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            <br>
+
+            {{ form.Quest3.label }} <br>
+            {{ form.Quest3(size=64) }}
+            <!--List the errors for this field-->
+            {% for error in form.Quest3.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            <br>
+
+            {{ form.Quest4.label }} <br>
+            {{ form.Quest4(size=64) }}
+            <!--List the errors for this field-->
+            {% for error in form.Quest4.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            <br>
+
+            {{ form.Quest5.label }} <br>
+            {{ form.Quest5(size=64) }}
+            <!--List the errors for this field-->
+            {% for error in form.Quest5.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            <br>
+
+            {{ form.Quest6.label }} <br>
+            {{ form.Quest6(size=64) }}
+            <!--List the errors for this field-->
+            {% for error in form.Quest6.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+
 
             {{form.submit()}}
         </form>

@@ -67,3 +67,17 @@ class Comment(Document):
     meta = {
         'ordering': ['-createdate']
     }
+
+class Survey(Document):
+    User = ReferenceField('User',reverse_delete_rule=CASCADE) 
+    Quest1 = StringField()
+    Quest2 = StringField()
+    Quest3 = StringField()
+    Quest4 = StringField()
+    Quest5 = StringField()
+    Quest6 = StringField()
+    createdate = DateTimeField(default=dt.datetime.utcnow)
+
+    meta = {
+        'ordering': ['-createdate']
+    }

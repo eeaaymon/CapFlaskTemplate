@@ -69,3 +69,12 @@ class PostForm(FlaskForm):
 class CommentForm(FlaskForm):
     content = TextAreaField('Comment', validators=[DataRequired()])
     submit = SubmitField('Comment')
+
+class SurveyForm(FlaskForm):
+    Quest1 = StringField()
+    Quest2 = StringField()
+    Quest3 = StringField()
+    Quest4 = StringField()
+    Quest5 = StringField()
+    Quest6 = StringField()
+    submit = SubmitField('Submit')
