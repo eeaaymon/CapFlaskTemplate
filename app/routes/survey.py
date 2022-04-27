@@ -33,3 +33,17 @@ def surveyNew():
 def survey(surveyId):
     thisSurvey = Survey.objects.get(id = surveyId)
     return render_template('surveySubmit.html', survey = thisSurvey)
+
+@app.route('/survey/delete/<surveyId>')
+@login_required
+def surveyDelete(surveyId):
+    delSurvey = Survey.objects.get(id = surveyId)
+    flash(f"Deleting results named {delSurvey.surveyName}.")
+    delSurvey.delete()
+    return redirect(url_for('surveyList'))
+
+@app.route('/survey/list')
+@login_required
+def surveyList():
+    survey = Survey.objects()
+    return render_template('surveySubmits.html', survey = survey)

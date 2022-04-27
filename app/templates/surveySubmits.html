@@ -1,0 +1,24 @@
+<!-- This is a blank template.  You can copy this to make a new template page. -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% for surveySubmit in surveySubmits%}
+
+<a href="/survey/delete{{surveyId}}">delete</a> |
+<a href="/survey/edit{{surveyId}}">edit</a>  |
+
+{{survey.id}}<br>
+<a href="/survey/{{survey.Id}}">{{survey.id}}</a> <br>
+{{survey.user}} <br>
+{{survey.Quest1}}<br>
+{{survey.Quest2}}<br>
+{{survey.Quest3}}<br>
+{{survey.Quest4}}<br>
+{{survey.Quest5}}<br>
+{{survey.Quest6}}<br>
+{{survey.createdate}}
+<br> <br>
+
+{% endblock %}
