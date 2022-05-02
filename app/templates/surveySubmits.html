@@ -4,21 +4,23 @@
 
 {% block body %}
 
-{% for surveySubmit in surveySubmits%}
 
 <a href="/survey/delete{{surveyId}}">delete</a> |
 <a href="/survey/edit{{surveyId}}">edit</a>  |
+<br>
 
-{{survey.id}}<br>
-<a href="/survey/{{survey.Id}}">{{survey.id}}</a> <br>
-{{survey.user}} <br>
-{{survey.Quest1}}<br>
-{{survey.Quest2}}<br>
-{{survey.Quest3}}<br>
-{{survey.Quest4}}<br>
-{{survey.Quest5}}<br>
-{{survey.Quest6}}<br>
-{{survey.createdate}}
+{% for survey in survey %}
+    <a href="/survey/{{survey.Id}}">{{survey.id}}</a>
+    {{survey.user}} <br>
+    {{survey.Quest1}}<br>
+    {{survey.Quest2}}<br>
+    {{survey.Quest3}}<br>
+    {{survey.Quest4}}<br>
+    {{survey.Quest5}}<br>
+    {{survey.Quest6}}<br>
+    {{survey.createdate}}<br>
+    <hr>
+{% endfor %}
 <br> <br>
 
 {% endblock %}
