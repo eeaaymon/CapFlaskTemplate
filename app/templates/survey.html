@@ -16,7 +16,7 @@
         <form method=post>
             {{ form.hidden_tag() }}
             
-            {{ form.Name(optional).label }} <br>
+            {{ form.Quest1.label }} <br>
             {{ form.Quest1(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest1.errors %}
