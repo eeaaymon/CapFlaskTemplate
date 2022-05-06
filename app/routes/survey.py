@@ -28,6 +28,34 @@ def surveyNew():
 
     return render_template('survey.html', form=form)
 
+@app.route('/survey/edit/<surveyId>', methods=['GET', 'POST'])
+@login_required
+def surveyEdit(surveyId):
+    form = SurveyForm()
+    editSurvey = Survey.objects.get(id=surveyId) 
+
+    if form.validate_on_submit():
+        editSurvey.update(
+            User = current_user.id,
+            Quest1 = form.Quest1.data,
+            Quest2 = form.Quest2.data,
+            Quest3 = form.Quest3.data,
+            Quest4 = form.Quest4.data,
+            Quest5 = form.Quest5.data,
+            Quest6 = form.Quest6.data
+        )
+        return redirect(url_for('survey',surveyId=editSurvey.id))
+
+    form.Quest1.data = editSurvey.Quest1
+    form.Quest2.data = editSurvey.Quest2
+    form.Quest3.data = editSurvey.Quest3
+    form.Quest4.data = editSurvey.Quest4
+    form.Quest5.data = editSurvey.Quest5
+    form.Quest6.data = editSurvey.Quest6
+
+    return render_template('survey.html', form=form)
+
+
 @app.route('/survey/<surveyId>')
 @login_required 
 def survey(surveyId):
@@ -38,7 +66,7 @@ def survey(surveyId):
 @login_required
 def surveyDelete(surveyId):
     delSurvey = Survey.objects.get(id = surveyId)
-    flash(f"Deleting results named {delSurvey.surveyName}.")
+    flash(f"Deleting results named {delSurvey.id}.")
     delSurvey.delete()
     return redirect(url_for('surveyList'))
 

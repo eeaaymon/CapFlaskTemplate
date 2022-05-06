@@ -5,11 +5,14 @@
 {% block body %}
 
 
-<a href="/survey/delete{{surveyId}}">delete</a> |
-<a href="/survey/edit{{surveyId}}">edit</a>  |
-<br>
+
 
 {% for survey in survey %}
+
+<a href="/survey/delete/{{survey.id}}">delete</a> |
+<a href="/survey/edit/{{survey.id}}">edit</a>  |
+<br>
+
     <a href="/survey/{{survey.Id}}">{{survey.id}}</a>
     {{survey.user}} <br>
     {{survey.Quest1}}<br>
