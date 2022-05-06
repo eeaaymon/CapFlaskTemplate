@@ -16,7 +16,7 @@
         <form method=post>
             {{ form.hidden_tag() }}
             
-            {{ form.Quest1.label }} <br>
+            Name(optional)<br>
             {{ form.Quest1(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest1.errors %}
@@ -25,7 +25,7 @@
 
             <br>
 
-            {{ form.Quest2.label }} <br>
+            What would you say is your favorite part of being at this school?<br>
             {{ form.Quest2(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest2.errors %}
@@ -34,7 +34,7 @@
 
             <br>
 
-            {{ form.Quest3.label }} <br>
+            How do you feel about the facilities at Oakland Tech? Do they have everything you need?<br>
             {{ form.Quest3(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest3.errors %}
@@ -43,7 +43,7 @@
 
             <br>
 
-            {{ form.Quest4.label }} <br>
+            Has the communication from Tech been good or bad? Explain<br>
             {{ form.Quest4(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest4.errors %}
@@ -52,7 +52,7 @@
 
             <br>
 
-            {{ form.Quest5.label }} <br>
+            How should we prioritize our school budget for Oakland Tech?<br>
             {{ form.Quest5(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest5.errors %}
@@ -61,7 +61,7 @@
 
             <br>
 
-            {{ form.Quest6.label }} <br>
+            What is something at other schools that you would like to see at Oakland Tech?<br>
             {{ form.Quest6(size=64) }}
             <!--List the errors for this field-->
             {% for error in form.Quest6.errors %}
