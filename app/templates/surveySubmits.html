@@ -9,11 +9,10 @@
 
 {% for survey in survey %}
 
-<a href="/survey/delete/{{survey.id}}">delete</a> |
-<a href="/survey/edit/{{survey.id}}">edit</a>  |
+<a href="/survey/delete/{{survey.id}}" style="color: rgb(255, 217, 0)">DELETE</a> |
+<a href="/survey/edit/{{survey.id}}" style="color: rgb(255, 217, 0)" >EDIT</a>  |
 <br>
 
-    <a href="/survey/{{survey.Id}}">{{survey.id}}</a>
     {{survey.user}} <br>
     {{survey.Quest1}}<br>
     {{survey.Quest2}}<br>
@@ -22,7 +21,7 @@
     {{survey.Quest5}}<br>
     {{survey.Quest6}}<br>
     {{survey.createdate}}<br>
-    <hr>
+    <hr style="height:10px">
 {% endfor %}
 <br> <br>
 
